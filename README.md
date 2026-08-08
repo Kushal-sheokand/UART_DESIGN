@@ -16,9 +16,17 @@ FIFO-buffered I/O on both TX and RX sides, allowing back-to-back byte transfers 
 16x oversampling on receive — the receiver samples the incoming line 16 times per bit period and captures data at the bit center, giving tolerance to timing drift and short glitches on the serial line.
 Start-bit re-qualification — the receiver double-checks the line is still low at the mid-point of the start bit before committing to a byte reception, rejecting short glitches.
 2-stage input synchronizer on the receiver's serial input to reduce metastability risk from the asynchronous incoming signal.
+
+
+
 Shared baud generator producing both 1x and 16x ticks from one clock, keeping TX and RX timing derived from a single source.
+
 Sample Output
+
 PASS: byte 0 expected=0xa5 received=0xa5
+
 PASS: byte 1 expected=0x3c received=0x3c
+
 PASS: byte 2 expected=0xff received=0xff
+
 === ALL TESTS PASSED ===
